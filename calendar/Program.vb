@@ -12,9 +12,7 @@ Module Program
 
         For monthIndex As Integer = 1 To 12
             Dim firstDayOfMonth As String = monthIndex.ToString("00") & "/01/" & year.ToString()
-            Dim firstDayDate As Date = Date.ParseExact(firstDayOfMonth, "MM/dd/yyyy", System.Globalization.CultureInfo.InvariantCulture)
-
-            Dim firstDayOfWeek As Integer = DateAndTime.Weekday(firstDayDate)
+            Dim firstDayOfWeek As Integer = DateAndTime.Weekday(firstDayOfMonth)
 
             Console.WriteLine()
             Console.WriteLine(MonthName(monthIndex) & " " & year)
